@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-// import *as MyPdfViewer from './components/pdf/pdf'
-import PDF from 'react-pdf-js'
-// import { Document } from 'react-pdf'
-// import myPDF from './h5.pdf'
 import './App.css';
+
+import Pdf from './components/pdf/pdf'
 
 class App extends Component {
 
@@ -26,19 +24,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
 
-       {/* <PDF file={require('./h5.pdf')} onDocumentComplete={this.onDocumentComplete}
-         onPageComplete={this.state.page} /> */}
-
-         <div className="parentDivWhoseWidthAndHeightAreUsedToStretchThePdf">
-          <PDF
-            // file={myPDF}
-            file={require('./h5.pdf')}
-            fillWidth
-            fillHeight // this will be ignored because fillWidth is also passed
-          />
-        </div>
-
-        {/* <Document file={myPDF} /> */}
+        <Pdf />
 
       </div>
     );
